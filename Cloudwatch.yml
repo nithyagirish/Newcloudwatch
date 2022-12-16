@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Creation of Cloudwatch alarm with specified metrics"
+Resources:
+  SnsTopicMetricFilterCloudWatchAlarm:
+    Type: "AWS::SNS::Topic"
+    Properties:
+      Subscription:
+        - Endpoint: "Endpoint1"
+          Protocol: "protocol1"
+      TopicName: "alarm-action"
+  CloudWatchAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmName: "cloudwatchalarm"
+      AlarmDescription: "A CloudWatch Alarm that triggers when it reaches greater than threshold."
+      MetricName: "metricname1"
+      Namespace: "namescpace1"
+      Statistic: "Average"
+      Period: "period1"
+      EvaluationPeriods: "1"
+      Threshold: "threshold1"
+      ComparisonOperator: "GreaterThanOrEqualToThreshold"
+      AlarmActions:
+        - Ref: "SnsTopicMetricFilterCloudWatchAlarm"
+      TreatMissingData: "notBreaching"
+Parameters: {}
+Metadata: {}
+Conditions: {}
