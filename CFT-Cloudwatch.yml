@@ -5,7 +5,7 @@ Resources:
     Type: "AWS::SNS::Topic"
     Properties:
       Subscription:
-        - Endpoint: "Endpoint1"
+        - Endpoint: "endpoint1"
           Protocol: "protocol1"
       TopicName: "alarm-action"
   CloudWatchAlarm:
@@ -14,10 +14,10 @@ Resources:
       AlarmName: "cloudwatchalarm"
       AlarmDescription: "A CloudWatch Alarm that triggers when it reaches greater than threshold."
       MetricName: "metricname1"
-      Namespace: "namescpace1"
+      Namespace: "namespace1"
       Statistic: "statistics1"
       Period: "period1"
-      EvaluationPeriods: "evaluationperiod1"
+      EvaluationPeriods: "evaluation1"
       Threshold: "threshold1"
       ComparisonOperator: "operator1"
       AlarmActions:
