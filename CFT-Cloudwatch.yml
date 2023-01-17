@@ -15,7 +15,7 @@ Resources:
       AlarmDescription: "A CloudWatch Alarm that triggers when it reaches greater than threshold."
       MetricName: "metricname1"
       Namespace: "namescpace1"
-      Statistic: "Statistics1"
+      Statistic: "statistics1"
       Period: "period1"
       EvaluationPeriods: "evaluationperiod1"
       Threshold: "threshold1"
