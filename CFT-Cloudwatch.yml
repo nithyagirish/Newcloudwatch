@@ -11,7 +11,7 @@ Resources:
   CloudWatchAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:
-      AlarmName: "cloudwatchalarm"
+      AlarmName: "cloudwatchalarm-cft-nithya"
       AlarmDescription: "A CloudWatch Alarm that triggers when it reaches greater than threshold."
       MetricName: "metricname1"
       Namespace: "namespace1"
