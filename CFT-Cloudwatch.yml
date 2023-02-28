@@ -20,7 +20,6 @@ Resources:
       EvaluationPeriods: "evaluation1"
       Threshold: "threshold1"
       ComparisonOperator: "operator1"
-      aws_default_region: "us-east-2"
       AlarmActions:
         - Ref: "SnsTopicMetricFilterCloudWatchAlarm"
       TreatMissingData: "notBreaching"
